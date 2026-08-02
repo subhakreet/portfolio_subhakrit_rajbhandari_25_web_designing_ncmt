@@ -1,6 +1,6 @@
 # CSS
 
-Runtime styles are written with **Tailwind CSS v4** in `app/globals.css`
-(design tokens via `@theme`, utilities via `@layer`).
+`style.css` — the full design system: design tokens, loader, cursor, scroll progress,
+navbar, all sections, responsive rules, and reduced-motion support.
 
-Custom additions for this folder (e.g. `style.css`) can be imported from `app/layout.tsx`.
+Loaded from `index.html` via `<link rel="stylesheet" href="assets/css/style.css">`.

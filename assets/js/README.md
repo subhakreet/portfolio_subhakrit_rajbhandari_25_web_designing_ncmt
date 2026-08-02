@@ -1,5 +1,7 @@
 # JavaScript
 
-Runtime scripts are **React/TypeScript components** under `components/` and compiled by Next.js.
+`main.js` — vanilla JS, no dependencies, loaded with `defer` from `index.html`.
 
-Custom additions for this folder (e.g. `main.js`) can be imported from `app/layout.tsx` or a client component.
+Handles: loading screen, scroll progress, navbar scroll state + mobile menu, scroll-spy,
+reveal-on-scroll, animated counters, skill bars, particle background, custom cursor,
+and the contact form (simulated submission).

@@ -11,9 +11,8 @@
   "github": "https://github.com/subhakreet",
   "discord": "https://discord.com/users/735515450032521316",
   "stats": [
-    { "label": "Security Assessments", "value": 40, "suffix": "+" },
-    { "label": "Enterprise Projects", "value": 15, "suffix": "+" },
-    { "label": "Responsible Disclosure", "value": 1, "suffix": " Recognition" },
-    { "label": "Areas of Expertise", "value": 8, "suffix": "+" }
+    { "label": "Security Assessments", "value": 100, "suffix": "+" },
+    { "label": "Years of Experience", "value": 2, "suffix": "+" },
+    { "label": "Hall of Fame", "value": 1, "suffix": "" }
   ]
 }

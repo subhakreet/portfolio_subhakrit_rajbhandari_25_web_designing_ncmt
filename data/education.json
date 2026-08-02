@@ -1,11 +1,19 @@
 {
-  "degree": "Bachelor's in Cyber Security and Networking",
-  "institution": "Lincoln University College",
-  "note": "Focus areas: offensive security, application security, secure development, and network defense.",
-  "focus": [
-    "Offensive Security",
-    "Application Security",
-    "Network Security",
-    "Secure Software Development"
+  "stages": [
+    {
+      "level": "Primary",
+      "field": "Computer Science",
+      "institution": "Bhanubhakta Memorial School"
+    },
+    {
+      "level": "Secondary (+2)",
+      "field": "Management & Computer Science",
+      "institution": "Kathmandu Model College (KMC)"
+    },
+    {
+      "level": "Bachelor's Degree",
+      "field": "Cyber Security and Networking",
+      "institution": "National College of Management and Technical Science"
+    }
   ]
 }

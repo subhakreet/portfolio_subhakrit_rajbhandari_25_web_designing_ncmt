@@ -1,12 +1,12 @@
 {
   "roles": [
     {
-      "title": "Cybersecurity Penetration Tester",
+      "title": "Security Analyst",
       "type": "Full-time",
-      "organization": "Security Assessment Services",
-      "location": "Kathmandu, Nepal",
-      "period": "2022 — Present",
-      "summary": "Leading comprehensive security assessments for enterprise applications serving fintech companies, banking institutions, and international organizations.",
+      "organization": "Eminence Ways Pvt. Ltd.",
+      "location": "Setopool, Kathmandu, Nepal",
+      "period": "2024 — Present",
+      "summary": "Working as a Security Analyst at Eminence Ways Pvt. Ltd., delivering offensive security assessments and strengthening the security posture of enterprise clients.",
       "highlights": [
         "Conduct end-to-end Web Application Penetration Testing across enterprise platforms, validating findings with manual techniques and proof-of-concept development.",
         "Perform API Security Assessments covering authentication, authorization, and business-logic flaws in mission-critical services.",
@@ -14,21 +14,6 @@
         "Carry out Thick Client and Network Penetration Testing across production and staging infrastructure.",
         "Deliver structured reporting with risk analysis, remediation guidance, and client-ready technical documentation.",
         "Align assessments with OWASP Top 10, secure development principles, and industry best practices."
-      ]
-    },
-    {
-      "title": "Security Analyst — VAPT",
-      "type": "Full-time",
-      "organization": "Security Assessment Services",
-      "location": "Kathmandu, Nepal",
-      "period": "2021 — 2022",
-      "summary": "Supported offensive security engagements, strengthening methodology and reporting quality while communicating directly with clients.",
-      "highlights": [
-        "Performed Vulnerability Assessments and manual security testing for web and network assets.",
-        "Participated in Source Code Review engagements to identify security defects early in the SDLC.",
-        "Conducted black-box and gray-box testing, mapping results against OWASP Top 10.",
-        "Collaborated with clients on remediation strategies and produced technical documentation.",
-        "Practiced responsible disclosure and continuous learning across offensive security domains."
       ]
     }
   ],

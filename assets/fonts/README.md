@@ -1,5 +1,5 @@
 # Fonts
 
-Fonts (Manrope + Geist Mono) are self-hosted automatically by Next.js via `next/font/google` — no runtime font requests.
+Manrope + Geist Mono load from the Google Fonts CDN via `<link>` in `index.html`.
 
-Add any additional self-hosted font files here and register them in `app/globals.css`.
+Add any additional self-hosted font files here and reference them from `assets/css/style.css`.
