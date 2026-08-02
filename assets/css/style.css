@@ -342,12 +342,16 @@ html.has-cursor .cursor-ring {
 
 .section {
   position: relative;
-  padding-block: clamp(4.5rem, 9vw, 8rem);
+  padding-block: clamp(3.5rem, 6vw, 5rem);
   scroll-margin-top: 6rem;
 }
 
+.section + .section {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 .section--compact {
-  padding-block: clamp(4.5rem, 8vw, 7rem);
+  padding-block: clamp(3rem, 5vw, 4rem);
 }
 
 /* ---------- Section heading ---------- */
@@ -2112,7 +2116,7 @@ html.has-cursor .cursor-ring {
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 3.5rem 0;
+  padding: 1.5rem 0;
 }
 
 .footer__inner {
@@ -2121,14 +2125,12 @@ html.has-cursor .cursor-ring {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding-inline: clamp(1.25rem, 4vw, 2rem);
 }
 
 .footer__bottom {
-  margin-top: 2rem;
   width: 100%;
-  padding-top: 1.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
