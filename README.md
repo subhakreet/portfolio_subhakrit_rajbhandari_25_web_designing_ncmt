@@ -1,32 +1,39 @@
 # Subhakrit Rajbhandari — Portfolio
 
-Premium, modern, minimal portfolio for a **Cybersecurity Penetration Tester**.
-Dark, elegant, security-focused aesthetic — charcoal base, soft blue/cyan accents,
-subtle cyber-inspired details (no "hacker clichés").
+A single-page portfolio site for a cybersecurity penetration tester. Dark theme, minimal and clean, with a subtle cyber/terminal feel.
+
+## Tech Stack
+
+- Plain HTML + CSS + JavaScript — no frameworks, no build step
+- Content loaded from JSON files in `/data`
+- Google Fonts (CDN)
+- Fully static, host it anywhere (GitHub Pages, Netlify, etc.)
+
+## Design
+
+- **Design style:** Modern minimal, dark, with a subtle terminal/cyber aesthetic (nothing too "hacker movie")
+- **Theme:** Charcoal dark base with soft blue/cyan accents
+- **Fonts:** Manrope (body/headings) + Geist Mono (code/terminal bits)
+
+## Folder Structure
+
+```
+index.html                 # main page
+assets/
+  css/style.css            # all styling
+  js/main.js               # interactions (loader, reveals, cursor, particles, contact form)
+  images/                  # profile, icons, backgrounds
+data/                      # content as JSON (profile, skills, experience, projects, education)
+designs/                   # design deliverables (wireframes, mockups, ui-kit, branding)
+favicon.ico / favicon.svg
+```
 
 ## Run
 
-A fully static website — no build step, no dependencies.
+No build needed. Just open `index.html`, or serve the folder:
 
 ```bash
-# just open it
-open index.html
-
-# or serve the folder
-python3 -m http.server 8000   # http://localhost:8000
+python3 -m http.server 8000
 ```
 
-## Structure
-
-```
-index.html              # single-page site
-favicon.ico / .svg      # favicons
-assets/
-  css/style.css         # full design system
-  js/main.js            # interactions (loader, reveals, cursor, particles, form)
-  images/               # avatar, icons, backgrounds
-data/                   # content JSONs (profile, skills, experience, projects, education)
-designs/                # design deliverables (wireframes, mockups, ui-kit, branding)
-```
-
-Fonts: Manrope + Geist Mono (Google Fonts CDN). Fully responsive, dark by default.
+Then visit http://localhost:8000
