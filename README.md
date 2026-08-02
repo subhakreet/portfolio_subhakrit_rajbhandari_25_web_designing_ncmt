@@ -1,6 +1,6 @@
-# Subhakrit Rajbhandari — Portfolio
+# Subhakrit Rajbhandari - Portfolio
 
-A single-page portfolio site for a cybersecurity penetration tester. Dark theme, minimal and clean, with a subtle cyber/terminal feel.
+A single-page portfolio website. Dark theme, minimal and clean, with a subtle cyber feel.
 
 ## Tech Stack
 
@@ -11,7 +11,7 @@ A single-page portfolio site for a cybersecurity penetration tester. Dark theme,
 
 ## Design
 
-- **Design style:** Modern minimal, dark, with a subtle terminal/cyber aesthetic (nothing too "hacker movie")
+- **Design style:** Modern minimal, dark, with a subtle cyber aesthetic
 - **Theme:** Charcoal dark base with soft blue/cyan accents
 - **Fonts:** Manrope (body/headings) + Geist Mono (code/terminal bits)
 
@@ -64,5 +64,3 @@ A single-page portfolio site for a cybersecurity penetration tester. Dark theme,
 ## Live Site
 
 Hosted on GitHub Pages and live at **http://subhakrit.com.np**
-
-No build needed — fully static, just open `index.html`.
