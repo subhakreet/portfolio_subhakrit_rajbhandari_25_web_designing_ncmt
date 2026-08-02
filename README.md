@@ -17,15 +17,48 @@ A single-page portfolio site for a cybersecurity penetration tester. Dark theme,
 
 ## Folder Structure
 
-```
-index.html                 # main page
-assets/
-  css/style.css            # all styling
-  js/main.js               # interactions (loader, reveals, cursor, particles, contact form)
-  images/                  # profile, icons, backgrounds
-data/                      # content as JSON (profile, skills, experience, projects, education)
-designs/                   # design deliverables (wireframes, mockups, ui-kit, branding)
-favicon.ico / favicon.svg
+```text
+.
+├── index.html                          # main page
+├── CNAME                               # custom domain → subhakrit.com.np
+├── favicon.ico                         # favicon
+├── favicon.svg                         # favicon (vector)
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css                   # all styling
+│   ├── js/
+│   │   └── main.js                     # interactions (loader, reveals, cursor, particles, contact form)
+│   ├── fonts/                          # local fonts
+│   └── images/
+│       ├── profile/
+│       │   └── avatar.svg              # profile picture
+│       ├── icons/                      # icons
+│       ├── backgrounds/                # background graphics
+│       └── projects/                   # project screenshots
+│
+├── data/
+│   ├── profile.json                    # name, headline, intro, links, stats
+│   ├── skills.json                     # skill categories & levels
+│   ├── experience.json                 # roles, highlights, responsibilities
+│   ├── projects.json                   # featured projects
+│   └── education.json                  # education stages
+│
+└── designs/                            # design deliverables
+    ├── branding/
+    │   ├── colors/
+    │   │   └── palette.md              # color palette
+    │   ├── typography/
+    │   │   └── typography.md           # font system
+    │   └── logo/
+    │       └── logo.md                 # logo specs
+    ├── ui-kit/
+    │   └── UI-Kit.md                   # UI kit
+    ├── wireframes/
+    ├── mockups/
+    │   └── home-page.html              # home page mockup
+    ├── figma-exports/
+    └── references/
 ```
 
 ## Live Site
