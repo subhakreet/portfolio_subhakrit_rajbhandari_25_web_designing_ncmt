@@ -1,4 +1,4 @@
-# Subhakrit Rajbhandari — Portfolio
+# Subhakrit Rajbhandari - Portfolio
 
 A single-page portfolio website. Dark theme, minimal and clean, with a subtle cyber feel.
 
