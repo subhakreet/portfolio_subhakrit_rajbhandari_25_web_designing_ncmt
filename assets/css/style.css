@@ -707,51 +707,6 @@ html.has-cursor .cursor-ring {
   }
 }
 
-/* ---------- Floating socials ---------- */
-.socials-float {
-  position: fixed;
-  left: 1.75rem;
-  bottom: 0;
-  z-index: 40;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-@media (min-width: 1024px) {
-  .socials-float {
-    display: flex;
-  }
-}
-
-.socials-float a {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--slate-500);
-  transition: all 0.3s ease;
-}
-
-.socials-float a:hover {
-  color: var(--accent-400);
-  transform: translateY(-4px);
-}
-
-.socials-float a svg {
-  width: 19px;
-  height: 19px;
-}
-
-.socials-float .line {
-  margin-top: 0.5rem;
-  height: 6rem;
-  width: 1px;
-  background: linear-gradient(to bottom, rgba(100, 116, 139, 0.6), transparent);
-}
-
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -881,6 +836,8 @@ html.has-cursor .cursor-ring {
   max-width: 36rem;
   font-size: clamp(1rem, 2vw, 1.125rem);
   line-height: 1.7;
+  text-align: justify;
+  hyphens: none;
   color: var(--slate-400);
 }
 
@@ -1348,8 +1305,11 @@ html.has-cursor .cursor-ring {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.exp-card__resp .mono-title {
+.exp-card__resp .form-intro {
   margin: 0;
+  font-size: 0.6875rem;
+  color: var(--slate-100);
+  opacity: 0.7;
 }
 
 .resp-tags {
