@@ -1057,35 +1057,7 @@ html.has-cursor .cursor-ring {
   color: var(--accent-400);
 }
 
-/* ---------- Page hero (recognition) ---------- */
-.hero--page {
-  padding-block: 8rem 3rem;
-}
-
-.page-head__title {
-  margin: 1.5rem 0 0;
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
-  font-weight: 600;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: var(--slate-50);
-}
-
-.page-head__code {
-  margin: 1.25rem 0 0;
-  font-family: var(--font-mono);
-  font-size: clamp(0.875rem, 2vw, 1rem);
-  color: var(--accent-400);
-}
-
-.page-head__intro {
-  margin: 1.5rem 0 0;
-  max-width: 36rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.7;
-  color: var(--slate-400);
-}
-
+/* ---------- Mono title ---------- */
 .mono-title {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -1440,14 +1412,6 @@ html.has-cursor .cursor-ring {
 
 .edu-card__head .mono-title {
   margin: 0;
-}
-
-.edu-card__note {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--slate-500);
 }
 
 .edu-line {
@@ -2069,6 +2033,28 @@ html.has-cursor .cursor-ring {
 
 .expertise-card .glow-dot {
   animation: breathe 6s ease-in-out infinite;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 379px) {
+  .avatar-frame img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .chip--tl {
+    right: -0.25rem;
+    top: 1.25rem;
+  }
+
+  .chip--bl {
+    left: -0.25rem;
+    bottom: 2rem;
+  }
+
+  .stat {
+    padding: 1rem 0.75rem;
+  }
 }
 
 /* ---------- Reduced motion ---------- */
