@@ -1960,11 +1960,6 @@ html.has-cursor .cursor-ring {
   text-overflow: ellipsis;
 }
 
-.channel__note {
-  font-size: 11px;
-  color: var(--slate-500);
-}
-
 .form-wrap {
   position: relative;
   overflow: hidden;
@@ -2133,7 +2128,6 @@ html.has-cursor .cursor-ring {
 .footer__bottom {
   margin-top: 2rem;
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 1.75rem;
   display: flex;
   flex-direction: column;
