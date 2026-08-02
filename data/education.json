@@ -1,0 +1,11 @@
+{
+  "degree": "Bachelor's in Cyber Security and Networking",
+  "institution": "Lincoln University College",
+  "note": "Focus areas: offensive security, application security, secure development, and network defense.",
+  "focus": [
+    "Offensive Security",
+    "Application Security",
+    "Network Security",
+    "Secure Software Development"
+  ]
+}

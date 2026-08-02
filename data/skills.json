@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "title": "Offensive Security",
+      "icon": "crosshair",
+      "skills": [
+        { "name": "VAPT", "level": 95 },
+        { "name": "Penetration Testing", "level": 95 },
+        { "name": "Ethical Hacking", "level": 92 },
+        { "name": "Application Security", "level": 90 }
+      ]
+    },
+    {
+      "title": "Application Security",
+      "icon": "shield",
+      "skills": [
+        { "name": "Web Security", "level": 95 },
+        { "name": "API Security", "level": 90 },
+        { "name": "Mobile Security", "level": 85 },
+        { "name": "Thick Client Security", "level": 82 }
+      ]
+    },
+    {
+      "title": "Assessment & Analysis",
+      "icon": "search",
+      "skills": [
+        { "name": "Vulnerability Assessment", "level": 95 },
+        { "name": "Source Code Review", "level": 85 },
+        { "name": "Security Analysis", "level": 90 },
+        { "name": "Risk Assessment", "level": 88 }
+      ]
+    },
+    {
+      "title": "Methodologies",
+      "icon": "book",
+      "skills": [
+        { "name": "OWASP Top 10", "level": 95 },
+        { "name": "Manual Testing", "level": 92 },
+        { "name": "Security Methodologies", "level": 90 },
+        { "name": "Secure Development Principles", "level": 85 }
+      ]
+    }
+  ]
+}

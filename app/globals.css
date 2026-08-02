@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — dark premium charcoal */
+  --color-ink-950: #06090d;
+  --color-ink-900: #0b0f14;
+  --color-ink-850: #0e141c;
+  --color-ink-800: #111827;
+  --color-ink-700: #1a2432;
+  --color-ink-600: #263247;
+
+  /* Soft blue / cyan accents */
+  --color-accent-300: #7dd3fc;
+  --color-accent-400: #38bdf8;
+  --color-accent-500: #0ea5e9;
+  --color-accent-600: #0284c7;
+  --color-glow: #22d3ee;
+
+  /* Typography */
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+
+  /* Elevation */
+  --shadow-soft: 0 10px 40px -12px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 40px -8px rgba(56, 189, 248, 0.35);
+  --shadow-card: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset, 0 12px 40px -16px rgba(0, 0, 0, 0.6);
+
+  /* Motion */
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-grid-pan: grid-pan 18s linear infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
+  --animate-float-y: float-y 6s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      opacity: 0.45;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes grid-pan {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 56px 56px;
+    }
+  }
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes float-y {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: rgba(148, 163, 184, 0.12);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink-900);
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(56, 189, 248, 0.25);
+    color: #f0f9ff;
+  }
+
+  /* Custom cursor replaces the native cursor on fine-pointer devices */
+  html.has-cursor,
+  html.has-cursor * {
+    cursor: none !important;
+  }
+
+  html.has-cursor a,
+  html.has-cursor button,
+  html.has-cursor [role="button"] {
+    cursor: none !important;
+  }
+
+  /* Slim, subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-ink-900);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--color-ink-600), var(--color-ink-700));
+    border-radius: 9999px;
+    border: 2px solid var(--color-ink-900);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-600);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(
+      92deg,
+      #7dd3fc 0%,
+      #38bdf8 45%,
+      #3b82f6 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.015)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+  }
+
+  .glass-strong {
+    background: linear-gradient(
+      160deg,
+      rgba(17, 24, 39, 0.85),
+      rgba(11, 15, 20, 0.9)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+  }
+
+  .card-surface {
+    background: linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .border-gradient {
+    position: relative;
+    background:
+      linear-gradient(var(--color-ink-850), var(--color-ink-850)) padding-box,
+      linear-gradient(140deg, rgba(125, 211, 252, 0.55), rgba(59, 130, 246, 0.12) 40%, rgba(255, 255, 255, 0.05) 70%) border-box;
+    border: 1px solid transparent;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(125, 211, 252, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(125, 211, 252, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}

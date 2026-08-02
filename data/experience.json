@@ -1,0 +1,51 @@
+{
+  "roles": [
+    {
+      "title": "Cybersecurity Penetration Tester",
+      "type": "Full-time",
+      "organization": "Security Assessment Services",
+      "location": "Kathmandu, Nepal",
+      "period": "2022 — Present",
+      "summary": "Leading comprehensive security assessments for enterprise applications serving fintech companies, banking institutions, and international organizations.",
+      "highlights": [
+        "Conduct end-to-end Web Application Penetration Testing across enterprise platforms, validating findings with manual techniques and proof-of-concept development.",
+        "Perform API Security Assessments covering authentication, authorization, and business-logic flaws in mission-critical services.",
+        "Execute Mobile Application Security Testing on iOS and Android targets, including traffic analysis and binary review.",
+        "Carry out Thick Client and Network Penetration Testing across production and staging infrastructure.",
+        "Deliver structured reporting with risk analysis, remediation guidance, and client-ready technical documentation.",
+        "Align assessments with OWASP Top 10, secure development principles, and industry best practices."
+      ]
+    },
+    {
+      "title": "Security Analyst — VAPT",
+      "type": "Full-time",
+      "organization": "Security Assessment Services",
+      "location": "Kathmandu, Nepal",
+      "period": "2021 — 2022",
+      "summary": "Supported offensive security engagements, strengthening methodology and reporting quality while communicating directly with clients.",
+      "highlights": [
+        "Performed Vulnerability Assessments and manual security testing for web and network assets.",
+        "Participated in Source Code Review engagements to identify security defects early in the SDLC.",
+        "Conducted black-box and gray-box testing, mapping results against OWASP Top 10.",
+        "Collaborated with clients on remediation strategies and produced technical documentation.",
+        "Practiced responsible disclosure and continuous learning across offensive security domains."
+      ]
+    }
+  ],
+  "responsibilities": [
+    "Web Application Penetration Testing",
+    "API Security Assessments",
+    "Mobile Application Security Testing",
+    "Thick Client Security Testing",
+    "Network Penetration Testing",
+    "Vulnerability Assessments",
+    "Source Code Review",
+    "Manual Security Testing",
+    "Reporting & Proof-of-Concept Development",
+    "Risk Analysis",
+    "OWASP Top 10 Assessments",
+    "Secure Remediation Guidance",
+    "Client Communication",
+    "Technical Documentation"
+  ]
+}
