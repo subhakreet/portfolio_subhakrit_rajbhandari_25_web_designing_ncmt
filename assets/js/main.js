@@ -94,10 +94,15 @@
    * --------------------------------------------------------- */
   (function initScrollSpy() {
     var links = doc.querySelectorAll("#navLinks .nav__link");
-    var sections = Array.prototype.map.call(links, function (link) {
+    var sections = [];
+
+    Array.prototype.forEach.call(links, function (link) {
       var id = link.getAttribute("href");
-      return doc.querySelector(id);
-    }).filter(Boolean);
+      if (id && id.charAt(0) === "#") {
+        var section = doc.querySelector(id);
+        if (section) sections.push(section);
+      }
+    });
 
     if (!("IntersectionObserver" in window) || sections.length === 0) return;
 

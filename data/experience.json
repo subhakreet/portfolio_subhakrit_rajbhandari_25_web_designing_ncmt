@@ -2,17 +2,17 @@
   "roles": [
     {
       "title": "Security Analyst",
-      "type": "Full-time",
+      "type": "Full time",
       "organization": "Eminence Ways Pvt. Ltd.",
       "location": "Setopool, Kathmandu, Nepal",
       "period": "2024 — Present",
       "summary": "Working as a Security Analyst at Eminence Ways Pvt. Ltd., delivering offensive security assessments and strengthening the security posture of enterprise clients.",
       "highlights": [
-        "Conduct end-to-end Web Application Penetration Testing across enterprise platforms, validating findings with manual techniques and proof-of-concept development.",
-        "Perform API Security Assessments covering authentication, authorization, and business-logic flaws in mission-critical services.",
+        "Conduct end to end Web Application Penetration Testing across enterprise platforms, validating findings with manual techniques and proof of concept development.",
+        "Perform API Security Assessments covering authentication, authorization, and business logic flaws in mission critical services.",
         "Execute Mobile Application Security Testing on iOS and Android targets, including traffic analysis and binary review.",
         "Carry out Thick Client and Network Penetration Testing across production and staging infrastructure.",
-        "Deliver structured reporting with risk analysis, remediation guidance, and client-ready technical documentation.",
+        "Deliver structured reporting with risk analysis, remediation guidance, and client ready technical documentation.",
         "Align assessments with OWASP Top 10, secure development principles, and industry best practices."
       ]
     }
@@ -26,7 +26,7 @@
     "Vulnerability Assessments",
     "Source Code Review",
     "Manual Security Testing",
-    "Reporting & Proof-of-Concept Development",
+    "Reporting & Proof of Concept Development",
     "Risk Analysis",
     "OWASP Top 10 Assessments",
     "Secure Remediation Guidance",
