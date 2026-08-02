@@ -28,12 +28,8 @@ designs/                   # design deliverables (wireframes, mockups, ui-kit, b
 favicon.ico / favicon.svg
 ```
 
-## Run
+## Live Site
 
-No build needed. Just open `index.html`, or serve the folder:
+Hosted on GitHub Pages and live at **http://subhakrit.com.np**
 
-```bash
-python3 -m http.server 8000
-```
-
-Then visit http://localhost:8000
+No build needed — fully static, just open `index.html`.
