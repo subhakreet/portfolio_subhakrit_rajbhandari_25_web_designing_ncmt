@@ -64,4 +64,4 @@ A single-page portfolio website. Dark theme, minimal and clean, with a subtle cy
 
 ## Live Site
 
-Hosted on GitHub Pages and live at **http://subhakrit.com.np**
+Hosted on GitHub Pages and live at **https://subhakrit.com.np**
