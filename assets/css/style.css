@@ -800,12 +800,30 @@ html.has-cursor .cursor-ring {
   pointer-events: none;
 }
 
+.stat::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-600), var(--accent-400), var(--glow));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s var(--ease);
+  pointer-events: none;
+}
+
 .stat:hover {
-  background: rgba(14, 165, 233, 0.06);
+  background: rgba(14, 165, 233, 0.08);
 }
 
 .stat:hover::before {
-  background: rgba(14, 165, 233, 0.18);
+  background: rgba(14, 165, 233, 0.22);
+}
+
+.stat:hover::after {
+  transform: scaleX(1);
 }
 
 .stat dd,
