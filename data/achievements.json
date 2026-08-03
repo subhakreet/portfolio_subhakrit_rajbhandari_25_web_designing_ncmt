@@ -1,0 +1,14 @@
+{
+  "achievements": [
+    {
+      "title": "Responsible Disclosure Hall of Fame",
+      "org": "WebSec · Netherlands",
+      "icon": "award",
+      "description": "Reported a medium severity vulnerability through the public Responsible Disclosure Program, contributed to its remediation, and earned recognition in WebSec's Hall of Fame.",
+      "link": {
+        "label": "View Hall of Fame",
+        "href": "https://websec.nl/vdp/priservices/hall-of-fame"
+      }
+    }
+  ]
+}

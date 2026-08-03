@@ -4,25 +4,6 @@
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var prefersFinePointer = window.matchMedia("(pointer: fine)").matches;
   var doc = document;
-  var body = doc.body;
-
-  /* ---------------------------------------------------------
-   * Loading screen
-   * --------------------------------------------------------- */
-  (function initLoader() {
-    var loader = doc.getElementById("loader");
-    var done = false;
-
-    function finish() {
-      if (done) return;
-      done = true;
-      body.classList.remove("is-loading");
-      if (loader) loader.classList.add("is-done");
-    }
-
-    window.addEventListener("load", finish);
-    setTimeout(finish, 2200);
-  })();
 
   /* ---------------------------------------------------------
    * Navbar scroll state + scroll progress + back to top
@@ -128,7 +109,7 @@
   /* ---------------------------------------------------------
    * Reveal on scroll
    * --------------------------------------------------------- */
-  (function initReveal() {
+  function initReveal() {
     var items = doc.querySelectorAll("[data-reveal]");
 
     items.forEach(function (el) {
@@ -158,12 +139,12 @@
     items.forEach(function (el) {
       observer.observe(el);
     });
-  })();
+  }
 
   /* ---------------------------------------------------------
    * Animated counters
    * --------------------------------------------------------- */
-  (function initCounters() {
+  function initCounters() {
     var els = doc.querySelectorAll(".count[data-count]");
 
     els.forEach(function (el) {
@@ -203,12 +184,12 @@
 
       observer.observe(el);
     });
-  })();
+  }
 
   /* ---------------------------------------------------------
    * Skill bars
    * --------------------------------------------------------- */
-  (function initSkillBars() {
+  function initSkillBars() {
     var fills = doc.querySelectorAll(".skill__fill[data-level]");
 
     if (!("IntersectionObserver" in window)) {
@@ -233,7 +214,7 @@
     fills.forEach(function (el) {
       observer.observe(el);
     });
-  })();
+  }
 
   /* ---------------------------------------------------------
    * Particle field
@@ -473,4 +454,315 @@
     var el = doc.getElementById("year");
     if (el) el.textContent = String(new Date().getFullYear());
   })();
+
+  /* ---------------------------------------------------------
+   * Data-driven content (loads page sections from /data/*.json)
+   * --------------------------------------------------------- */
+  (function initData() {
+    var esc = function (s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    };
+
+    function renderProfile(data) {
+      if (data.name) {
+        if (doc.title) doc.title = data.name;
+        var nameEl = doc.querySelector(".hero__name");
+        if (nameEl) {
+          var parts = data.name.trim().split(/\s+/);
+          var last = parts.pop() || "";
+          nameEl.innerHTML =
+            esc(parts.join(" ")) +
+            (last ? ' <span class="text-gradient">' + esc(last) + "</span>" : "");
+        }
+      }
+
+      var titleEl = doc.querySelector(".hero__title");
+      var introEl = doc.querySelector(".hero__intro");
+      if (titleEl && data.role) titleEl.textContent = data.role;
+      if (introEl && data.intro) introEl.textContent = data.intro;
+
+      var statsEl = doc.querySelector(".hero__stats");
+      if (statsEl && data.stats && data.stats.length) {
+        statsEl.innerHTML = data.stats
+          .map(function (stat) {
+            return (
+              '<div class="stat">' +
+              '<dd class="stat__value"><span class="count" data-count="' +
+              stat.value +
+              '">0</span>' +
+              esc(stat.suffix || "") +
+              "</dd>" +
+              '<dt class="stat__label">' +
+              esc(stat.label) +
+              "</dt>" +
+              "</div>"
+            );
+          })
+          .join("");
+      }
+
+      renderChannels(data);
+    }
+
+    function renderChannels(data) {
+      var wrap = doc.querySelector(".channels");
+      if (!wrap) return;
+
+      var defs = [
+        { key: "email", label: "Email", icon: "i-mail", external: false },
+        { key: "linkedin", label: "LinkedIn", icon: "i-linkedin", external: true },
+        { key: "github", label: "GitHub", icon: "i-github", external: true },
+        { key: "discord", label: "Discord", icon: "i-discord", external: true }
+      ];
+
+      wrap.innerHTML = defs
+        .map(function (def, i) {
+          var url = def.key === "email" ? "mailto:" + (data[def.key] || "") : data[def.key];
+          if (!url) return "";
+          var external = def.external ? ' target="_blank" rel="noopener noreferrer"' : "";
+          return (
+            '<a class="channel card-surface" data-reveal data-rd="' +
+            i * 60 +
+            '" href="' +
+            esc(url) +
+            '"' +
+            external +
+            ' aria-label="' +
+            def.label +
+            '">' +
+            '<span class="channel__icon"><svg><use href="#' +
+            def.icon +
+            '"></use></svg></span>' +
+            '<div class="channel__body"><p class="channel__label">' +
+            def.label +
+            "</p></div>" +
+            "</a>"
+          );
+        })
+        .join("");
+    }
+
+    function renderSkills(data) {
+      var wrap = doc.querySelector(".expertise__grid");
+      if (!wrap || !data.expertise) return;
+
+      wrap.innerHTML = data.expertise
+        .map(function (card, i) {
+          var rd = (i % 4) * 90;
+          return (
+            '<article class="expertise-card card-surface" data-reveal' +
+            (rd ? ' data-rd="' + rd + '"' : "") +
+            ">" +
+            '<span class="glow-dot"></span>' +
+            '<span class="expertise-card__icon"><svg><use href="#i-' +
+            card.icon +
+            '"></use></svg></span>' +
+            "<h3>" +
+            esc(card.title) +
+            "</h3>" +
+            "<p>" +
+            esc(card.description) +
+            "</p>" +
+            "</article>"
+          );
+        })
+        .join("");
+    }
+
+    function renderExperience(data) {
+      var wrap = doc.querySelector(".experience__items");
+      if (!wrap || !data.roles || !data.roles.length) return;
+
+      var role = data.roles[0];
+      var highlights = (role.highlights || [])
+        .map(function (h) {
+          return '<li><svg><use href="#i-check-circle-2"></use></svg><span>' + esc(h) + "</span></li>";
+        })
+        .join("");
+      var responsibilities = (data.responsibilities || [])
+        .map(function (r) {
+          return '<span class="resp-tag">' + esc(r) + "</span>";
+        })
+        .join("");
+
+      wrap.innerHTML =
+        '<article class="exp-item">' +
+        '<span class="exp-item__marker"><svg><use href="#i-briefcase"></use></svg></span>' +
+        '<div class="exp-card card-surface" data-reveal>' +
+        '<div class="exp-card__head">' +
+        "<h3>" +
+        esc(role.title) +
+        "</h3>" +
+        '<span class="tag-pill tag-pill--accent">' +
+        esc(role.type) +
+        "</span>" +
+        '<span class="tag-pill tag-pill--mono exp-card__period">' +
+        esc(role.period) +
+        "</span>" +
+        "</div>" +
+        '<p class="exp-card__org">' +
+        esc(role.organization) +
+        "</p>" +
+        '<p class="exp-card__summary">' +
+        esc(role.summary) +
+        "</p>" +
+        '<div class="exp-card__body">' +
+        '<ul class="exp-list">' +
+        highlights +
+        "</ul>" +
+        '<div class="exp-card__resp">' +
+        '<h3 class="exp-card__resp-title">Core Responsibilities</h3>' +
+        '<div class="resp-tags">' +
+        responsibilities +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</article>";
+    }
+
+    function renderEducation(data) {
+      var wrap = doc.querySelector(".edu-timeline");
+      if (!wrap || !data.stages) return;
+
+      wrap.innerHTML = data.stages
+        .map(function (stage) {
+          return (
+            '<div class="edu-stage">' +
+            '<span class="edu-stage__marker"><svg><use href="#i-' +
+            stage.icon +
+            '"></use></svg></span>' +
+            '<div class="edu-stage__body">' +
+            '<span class="badge-level">' +
+            esc(stage.level) +
+            "</span>" +
+            "<h3>" +
+            esc(stage.institution) +
+            "</h3>" +
+            '<p class="edu-stage__field">' +
+            esc(stage.field) +
+            "</p>" +
+            "</div>" +
+            "</div>"
+          );
+        })
+        .join("");
+    }
+
+    function renderCertifications(data) {
+      var wrap = doc.querySelector("#certifications .certs__grid");
+      if (!wrap || !data.certifications) return;
+
+      wrap.innerHTML = data.certifications
+        .map(function (cert, i) {
+          var rd = (i % 2) * 90;
+          return (
+            '<article class="cert-card card-surface" data-reveal' +
+            (rd ? ' data-rd="' + rd + '"' : "") +
+            ">" +
+            '<div class="cert-card__head">' +
+            '<span class="cert-card__icon"><svg><use href="#i-' +
+            cert.icon +
+            '"></use></svg></span>' +
+            "<div>" +
+            '<h3 class="cert-card__title">' +
+            esc(cert.title) +
+            '<svg><use href="#i-badge-check"></use></svg></h3>' +
+            '<p class="cert-card__org">' +
+            esc(cert.org) +
+            "</p>" +
+            "</div>" +
+            "</div>" +
+            '<div class="cert-card__foot">' +
+            '<a href="' +
+            esc(cert.link) +
+            '" target="_blank" rel="noopener noreferrer" class="btn-accent">View Certificate<svg><use href="#i-arrow-up-right"></use></svg></a>' +
+            "</div>" +
+            "</article>"
+          );
+        })
+        .join("");
+    }
+
+    function renderAchievements(data) {
+      var wrap = doc.querySelector("#achievements .certs__grid");
+      if (!wrap || !data.achievements) return;
+
+      wrap.innerHTML = data.achievements
+        .map(function (item) {
+          return (
+            '<article class="cert-card card-surface" data-reveal>' +
+            '<div class="cert-card__head">' +
+            '<span class="cert-card__icon"><svg><use href="#i-' +
+            item.icon +
+            '"></use></svg></span>' +
+            "<div>" +
+            '<h3 class="cert-card__title">' +
+            esc(item.title) +
+            '<svg><use href="#i-badge-check"></use></svg></h3>' +
+            '<p class="cert-card__org">' +
+            esc(item.org) +
+            "</p>" +
+            "</div>" +
+            "</div>" +
+            '<p class="text">' +
+            esc(item.description) +
+            "</p>" +
+            '<div class="cert-card__foot">' +
+            '<a href="' +
+            esc(item.link.href) +
+            '" target="_blank" rel="noopener noreferrer" class="btn-accent">' +
+            esc(item.link.label) +
+            '<svg><use href="#i-arrow-up-right"></use></svg></a>' +
+            "</div>" +
+            "</article>"
+          );
+        })
+        .join("");
+    }
+
+    var tasks = [
+      { url: "data/profile.json", render: renderProfile },
+      { url: "data/skills.json", render: renderSkills },
+      { url: "data/experience.json", render: renderExperience },
+      { url: "data/education.json", render: renderEducation },
+      { url: "data/certifications.json", render: renderCertifications },
+      { url: "data/achievements.json", render: renderAchievements }
+    ];
+
+    var total = tasks.length;
+    var finished = 0;
+
+    function reinit() {
+      finished++;
+      if (finished === total) {
+        initReveal();
+        initCounters();
+        initSkillBars();
+      }
+    }
+
+    tasks.forEach(function (task) {
+      fetch(task.url)
+        .then(function (res) {
+          if (!res.ok) throw new Error(task.url + " -> " + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          task.render(data);
+        })
+        .catch(function (err) {
+          console.warn("[data] " + task.url + ": " + err.message);
+        })
+        .then(reinit);
+    });
+  })();
+
+  initReveal();
+  initCounters();
+  initSkillBars();
 })();

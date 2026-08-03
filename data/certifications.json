@@ -1,0 +1,58 @@
+{
+  "certifications": [
+    {
+      "title": "ISO/IEC 27001:2022 Lead Auditor",
+      "org": "Audit & Governance",
+      "icon": "shield-check",
+      "link": "https://drive.google.com/file/d/1KZTEPvrtnkFhlLT2TALglVIigDy-tPIv/view"
+    },
+    {
+      "title": "Certified AppSec Practitioner (CAP)",
+      "org": "Application Security",
+      "icon": "lock",
+      "link": "https://drive.google.com/file/d/1U0VhEC3qAgQjL3IzNLt5Sitq2TDvKTaF/view"
+    },
+    {
+      "title": "Certified Network Security Practitioner (CNSP)",
+      "org": "Network Security",
+      "icon": "fingerprint",
+      "link": "https://drive.google.com/file/d/1mfbnnmYZNnRbvtcYX3q9SVfou32lqPWk/view"
+    },
+    {
+      "title": "Certified Threat Intelligence & Governance Analyst (CTIGA)",
+      "org": "Threat Intelligence",
+      "icon": "radar",
+      "link": "https://drive.google.com/file/d/1KPqNTyCqIPMsQjgcD1lhlU_Cbbfja879/view"
+    },
+    {
+      "title": "Certified Cybersecurity Educator Professional (CCEP)",
+      "org": "Security Education",
+      "icon": "graduation-cap",
+      "link": "https://drive.google.com/file/d/1gDt7eqqItiY2EUCdbjjlXGcLp70VSL1z/view"
+    },
+    {
+      "title": "ISO/IEC 27001:2022 Information Security Associate",
+      "org": "Information Security",
+      "icon": "badge-check",
+      "link": "https://drive.google.com/file/d/1eloyAgZNcrUE2AhIbbDs-H4SwxfjIGe7/view"
+    },
+    {
+      "title": "Master in Prompt Engineering and AI",
+      "org": "AI & Engineering",
+      "icon": "book-open",
+      "link": "https://drive.google.com/file/d/1V09ZOAzaQ_tK4KzhAneyB5f1vtfyvJ5P/view"
+    },
+    {
+      "title": "Ethical Hacking: Web Application Hacking",
+      "org": "Offensive Security",
+      "icon": "crosshair",
+      "link": "https://drive.google.com/file/d/1xkpEze1konGvMPKgC1DpI-2PKgI067U1/view"
+    },
+    {
+      "title": "Pentest+: Planning and Scoping Applications",
+      "org": "Penetration Testing",
+      "icon": "search",
+      "link": "https://drive.google.com/file/d/1rEou5KsnnOp4Ll8fBBCD4wdqNOfF_wo6/view"
+    }
+  ]
+}

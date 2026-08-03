@@ -28,7 +28,7 @@ A single-page portfolio website. Dark theme, minimal and clean, with a subtle cy
 │   ├── css/
 │   │   └── style.css                   # all styling
 │   ├── js/
-│   │   └── main.js                     # interactions (loader, reveals, cursor, particles, contact form)
+│   │   └── main.js                     # interactions (reveals, cursor, particles, contact form, data loading)
 │   ├── fonts/                          # local fonts
 │   └── images/
 │       ├── profile/
@@ -38,11 +38,12 @@ A single-page portfolio website. Dark theme, minimal and clean, with a subtle cy
 │       └── projects/                   # project screenshots
 │
 ├── data/
-│   ├── profile.json                    # name, headline, intro, links, stats
-│   ├── skills.json                     # skill categories & levels
+│   ├── profile.json                    # hero: name, role, intro, links, stats
+│   ├── skills.json                     # areas of expertise cards
 │   ├── experience.json                 # roles, highlights, responsibilities
-│   ├── projects.json                   # featured projects
-│   └── education.json                  # education stages
+│   ├── education.json                  # education stages
+│   ├── certifications.json             # certifications & licenses
+│   └── achievements.json               # hall of fame / recognitions
 │
 └── designs/                            # design deliverables
     ├── branding/

@@ -3,17 +3,20 @@
     {
       "level": "Primary",
       "field": "Computer Science",
-      "institution": "Bhanubhakta Memorial School"
+      "institution": "Bhanubhakta Memorial School",
+      "icon": "school"
     },
     {
       "level": "Secondary (+2)",
-      "field": "Management & Computer Science",
-      "institution": "Kathmandu Model College (KMC)"
+      "field": "Management · Computer Science",
+      "institution": "Kathmandu Model College (KMC)",
+      "icon": "book-open"
     },
     {
-      "level": "Bachelor's Degree",
-      "field": "Cyber Security and Networking",
-      "institution": "National College of Management and Technical Science"
+      "level": "Bachelor\u2019s Degree",
+      "field": "Bachelors in Cyber Security & Networking",
+      "institution": "National College of Management and Technical Science (NCMT)",
+      "icon": "graduation-cap"
     }
   ]
 }

@@ -1,44 +1,44 @@
 {
-  "categories": [
+  "expertise": [
     {
-      "title": "Offensive Security",
-      "icon": "crosshair",
-      "skills": [
-        { "name": "VAPT", "level": 95 },
-        { "name": "Penetration Testing", "level": 95 },
-        { "name": "Ethical Hacking", "level": 92 },
-        { "name": "Application Security", "level": 90 }
-      ]
+      "title": "Vulnerability Assessment & Penetration Testing",
+      "description": "End to end VAPT engagements combining automated scans with deep manual validation and business logic analysis.",
+      "icon": "radar"
     },
     {
-      "title": "Application Security",
-      "icon": "shield",
-      "skills": [
-        { "name": "Web Security", "level": 95 },
-        { "name": "API Security", "level": 90 },
-        { "name": "Mobile Security", "level": 85 },
-        { "name": "Thick Client Security", "level": 82 }
-      ]
+      "title": "Web Application Security",
+      "description": "Testing enterprise web platforms against OWASP Top 10 with realistic exploit paths and proof of concept development.",
+      "icon": "globe"
     },
     {
-      "title": "Assessment & Analysis",
-      "icon": "search",
-      "skills": [
-        { "name": "Vulnerability Assessment", "level": 95 },
-        { "name": "Source Code Review", "level": 85 },
-        { "name": "Security Analysis", "level": 90 },
-        { "name": "Risk Assessment", "level": 88 }
-      ]
+      "title": "API Security Testing",
+      "description": "Assessing authentication, authorization, and logic flaws in REST and GraphQL APIs that power critical services.",
+      "icon": "plug"
     },
     {
-      "title": "Methodologies",
-      "icon": "book",
-      "skills": [
-        { "name": "OWASP Top 10", "level": 95 },
-        { "name": "Manual Testing", "level": 92 },
-        { "name": "Security Methodologies", "level": 90 },
-        { "name": "Secure Development Principles", "level": 85 }
-      ]
+      "title": "Mobile Application Security",
+      "description": "iOS and Android security testing including traffic interception, storage analysis, and binary inspection.",
+      "icon": "smartphone"
+    },
+    {
+      "title": "Thick Client Security Testing",
+      "description": "Desktop application testing including decompilation, insecure storage, and transport level weaknesses.",
+      "icon": "monitor"
+    },
+    {
+      "title": "Risk Assessment",
+      "description": "Structured discovery and risk ranked findings mapped to real business impact and remediation priority.",
+      "icon": "search"
+    },
+    {
+      "title": "Source Code Review",
+      "description": "Auditing application code for injection, auth, and cryptographic flaws with actionable, fix level guidance.",
+      "icon": "file-code-2"
+    },
+    {
+      "title": "Technical Documentation",
+      "description": "Clear, structured security documentation with findings, risk ratings, and practical remediation guidance.",
+      "icon": "file-text"
     }
   ]
 }
