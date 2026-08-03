@@ -777,10 +777,35 @@ html.has-cursor .cursor-ring {
 }
 
 .stat {
+  position: relative;
+  overflow: hidden;
   min-width: 0;
   background: rgba(11, 15, 20, 0.9);
   padding: 1.25rem 1rem;
   text-align: center;
+  transition: background 0.3s ease;
+}
+
+.stat::before {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  right: -2.5rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9999px;
+  background: rgba(14, 165, 233, 0);
+  filter: blur(32px);
+  transition: background 0.4s ease;
+  pointer-events: none;
+}
+
+.stat:hover {
+  background: rgba(14, 165, 233, 0.06);
+}
+
+.stat:hover::before {
+  background: rgba(14, 165, 233, 0.18);
 }
 
 .stat dd,
@@ -793,6 +818,12 @@ html.has-cursor .cursor-ring {
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--slate-100);
+  transition: color 0.3s ease, transform 0.3s var(--ease);
+}
+
+.stat:hover .stat__value {
+  color: var(--accent-400);
+  transform: translateY(-2px);
 }
 
 .stat__label {
@@ -800,6 +831,11 @@ html.has-cursor .cursor-ring {
   font-size: 0.6875rem;
   line-height: 1.35;
   color: var(--slate-500);
+  transition: color 0.3s ease;
+}
+
+.stat:hover .stat__label {
+  color: var(--slate-300);
 }
 
 /* Hero visual */

@@ -13,14 +13,13 @@
       <stop stop-color="#94A3B8"/>
       <stop offset="1" stop-color="#334155"/>
     </linearGradient>
-    <linearGradient id="shieldGrad" x1="256" y1="200" x2="256" y2="392" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="1" stop-color="#2563EB"/>
-    </linearGradient>
     <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 220) rotate(90) scale(260)">
       <stop stop-color="#38BDF8" stop-opacity="0.22"/>
       <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
     </radialGradient>
+    <clipPath id="ringClip">
+      <circle cx="256" cy="256" r="196"/>
+    </clipPath>
   </defs>
 
   <rect width="512" height="512" rx="256" fill="url(#bgGrad)"/>
@@ -35,17 +34,14 @@
   <circle cx="256" cy="256" r="196" stroke="url(#ringGrad)" stroke-width="2.5"/>
 
   <!-- decorative dots -->
-  <circle cx="140" cy="150" r="4" fill="#7DD3FC" opacity="0.7"/>
-  <circle cx="386" cy="120" r="3" fill="#38BDF8" opacity="0.6"/>
-  <circle cx="390" cy="360" r="4" fill="#7DD3FC" opacity="0.5"/>
-  <circle cx="126" cy="330" r="3" fill="#38BDF8" opacity="0.6"/>
+  <circle cx="150" cy="150" r="4" fill="#7DD3FC" opacity="0.7"/>
+  <circle cx="362" cy="150" r="3" fill="#38BDF8" opacity="0.6"/>
+  <circle cx="108" cy="330" r="4" fill="#7DD3FC" opacity="0.5"/>
+  <circle cx="404" cy="330" r="3" fill="#38BDF8" opacity="0.6"/>
 
   <!-- person silhouette -->
-  <circle cx="256" cy="212" r="62" fill="url(#figureGrad)" opacity="0.95"/>
-  <path d="M126 452C126 372 184 318 256 318C328 318 386 372 386 452V452H126V452Z" fill="url(#figureGrad)" opacity="0.95"/>
-
-  <!-- shield -->
-  <path d="M256 196L322 216V284C322 344 294 374 256 392C218 374 190 344 190 284V216L256 196Z" fill="url(#shieldGrad)"/>
-  <path d="M256 226L291 236V272C291 304 278 322 256 334C234 322 221 304 221 272V236L256 226Z" stroke="#0B1220" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M236 272L250 286L278 254" stroke="#E0F2FE" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g clip-path="url(#ringClip)">
+    <circle cx="256" cy="212" r="62" fill="url(#figureGrad)" opacity="0.95"/>
+    <path d="M126 452C126 372 184 318 256 318C328 318 386 372 386 452V452H126V452Z" fill="url(#figureGrad)" opacity="0.95"/>
+  </g>
 </svg>
