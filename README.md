@@ -1,13 +1,12 @@
 # Subhakrit Rajbhandari - Portfolio
 
-A single-page portfolio website. Dark theme, minimal and clean, with a subtle cyber feel.
+A static portfolio website. Dark theme, minimal and clean, with a subtle cyber feel.
 
 ## Tech Stack
 
 - Plain HTML + CSS + JavaScript — no frameworks, no build step
 - Content loaded from JSON files in `/data`
 - Google Fonts (CDN)
-- Fully static, host it anywhere (GitHub Pages, Netlify, etc.)
 
 ## Design
 
