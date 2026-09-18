@@ -463,13 +463,6 @@ button {
   height: 18px;
 }
 
-.logo__text {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--slate-200);
-}
-
 .nav__links {
   display: none;
   align-items: center;
@@ -849,72 +842,6 @@ button {
     width: 380px;
     height: 380px;
   }
-}
-
-.chip {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-  box-shadow: var(--shadow-soft);
-  animation: chip-float 6s var(--ease) infinite;
-}
-
-.chip--tl {
-  top: 2rem;
-  right: -0.75rem;
-  animation-delay: 0s;
-}
-
-.chip--bl {
-  bottom: 2.5rem;
-  left: -0.75rem;
-  animation-delay: 3s;
-}
-
-@keyframes chip-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@media (min-width: 640px) {
-  .chip--tl {
-    right: -1.5rem;
-  }
-  .chip--bl {
-    left: -1.5rem;
-  }
-}
-
-.chip__icon {
-  width: 2.25rem;
-  height: 2.25rem;
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: rgba(14, 165, 233, 0.15);
-  color: var(--accent-400);
-}
-
-.chip__icon svg {
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.chip__title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  white-space: nowrap;
-  color: var(--slate-100);
 }
 
 .hero__manual {
@@ -1937,16 +1864,6 @@ button {
   .avatar-frame img {
     width: 260px;
     height: 260px;
-  }
-
-  .chip--tl {
-    right: -0.25rem;
-    top: 1.25rem;
-  }
-
-  .chip--bl {
-    left: -0.25rem;
-    bottom: 2rem;
   }
 
   .stat {
