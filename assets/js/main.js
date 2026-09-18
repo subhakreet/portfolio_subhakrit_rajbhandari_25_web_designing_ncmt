@@ -106,6 +106,45 @@
   })();
 
   /* ---------------------------------------------------------
+   * Hash-free in-page navigation (keep the URL static)
+   * --------------------------------------------------------- */
+  (function initHashlessNav() {
+    function cleanUrl() {
+      if (!window.history || !history.replaceState) return;
+      try {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+      } catch (err) {
+        /* ignore (e.g. file:// origins) */
+      }
+    }
+
+    function goTo(hash) {
+      var target = doc.getElementById(hash.slice(1));
+      if (!target) return false;
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start"
+      });
+      cleanUrl();
+      return true;
+    }
+
+    doc.addEventListener(
+      "click",
+      function (e) {
+        var link = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (!link) return;
+        var hash = link.getAttribute("href");
+        if (!hash || hash === "#") return;
+        if (goTo(hash)) e.preventDefault();
+      },
+      false
+    );
+
+    if (window.location.hash) goTo(window.location.hash);
+  })();
+
+  /* ---------------------------------------------------------
    * Reveal on scroll
    * --------------------------------------------------------- */
   function initReveal() {
