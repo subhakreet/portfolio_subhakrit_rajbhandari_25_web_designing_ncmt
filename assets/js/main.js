@@ -616,11 +616,6 @@
             "</p>" +
             "</div>" +
             "</div>" +
-            '<div class="cert-card__foot">' +
-            '<a href="' +
-            esc(cert.link) +
-            '" target="_blank" rel="noopener noreferrer" class="btn-accent">View Certificate<svg><use href="#i-arrow-up-right"></use></svg></a>' +
-            "</div>" +
             "</article>"
           );
         })
