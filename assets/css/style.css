@@ -221,48 +221,6 @@ button {
   transition: width 0.1s linear;
 }
 
-/* ---------- Custom cursor (fine-pointer devices only) ---------- */
-html.has-cursor,
-html.has-cursor * {
-  cursor: none !important;
-}
-
-.cursor-dot,
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  border-radius: 9999px;
-  pointer-events: none;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-}
-
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--accent-400);
-}
-
-.cursor-ring {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(56, 189, 248, 0.5);
-  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, opacity 0.2s ease;
-}
-
-.cursor-ring.is-active {
-  width: 56px;
-  height: 56px;
-  border-color: rgba(56, 189, 248, 0.9);
-}
-
-html.has-cursor .cursor-dot,
-html.has-cursor .cursor-ring {
-  opacity: 1;
-}
-
 /* ---------- Layout helpers ---------- */
 .container {
   width: 100%;
@@ -2011,9 +1969,5 @@ html.has-cursor .cursor-ring {
   [data-reveal] {
     opacity: 1;
     transform: none;
-  }
-  .cursor-dot,
-  .cursor-ring {
-    display: none;
   }
 }

@@ -2,7 +2,6 @@
   "use strict";
 
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var prefersFinePointer = window.matchMedia("(pointer: fine)").matches;
   var doc = document;
 
   /* ---------------------------------------------------------
@@ -309,66 +308,6 @@
     });
 
     requestAnimationFrame(step);
-  })();
-
-  /* ---------------------------------------------------------
-   * Custom cursor (fine-pointer devices only)
-   * --------------------------------------------------------- */
-  (function initCursor() {
-    if (!prefersFinePointer || prefersReducedMotion) return;
-
-    var dot = doc.getElementById("cursorDot");
-    var ring = doc.getElementById("cursorRing");
-    if (!dot || !ring) return;
-
-    doc.documentElement.classList.add("has-cursor");
-
-    var mouseX = -100;
-    var mouseY = -100;
-    var ringX = -100;
-    var ringY = -100;
-    var visible = false;
-
-    function move(x, y) {
-      mouseX = x;
-      mouseY = y;
-      if (!visible) {
-        visible = true;
-        dot.style.opacity = "1";
-        ring.style.opacity = "1";
-      }
-      dot.style.transform = "translate(" + x + "px, " + y + "px) translate(-50%, -50%)";
-    }
-
-    function loop() {
-      ringX += (mouseX - ringX) * 0.16;
-      ringY += (mouseY - ringY) * 0.16;
-      ring.style.transform = "translate(" + ringX + "px, " + ringY + "px) translate(-50%, -50%)";
-      requestAnimationFrame(loop);
-    }
-
-    window.addEventListener("mousemove", function (e) {
-      move(e.clientX, e.clientY);
-    });
-
-    document.addEventListener(
-      "mouseover",
-      function (e) {
-        var t = e.target;
-        var interactive =
-          t.closest && t.closest("a, button, input, textarea, select, [role='button']");
-        ring.classList.toggle("is-active", Boolean(interactive));
-      },
-      { passive: true }
-    );
-
-    document.addEventListener("mouseleave", function () {
-      visible = false;
-      dot.style.opacity = "0";
-      ring.style.opacity = "0";
-    });
-
-    requestAnimationFrame(loop);
   })();
 
   /* ---------------------------------------------------------
