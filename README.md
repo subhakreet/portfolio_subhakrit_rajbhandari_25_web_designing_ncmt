@@ -27,38 +27,17 @@ A static portfolio website. Dark theme, minimal and clean, with a subtle cyber f
 │   ├── css/
 │   │   └── style.css                   # all styling
 │   ├── js/
-│   │   └── main.js                     # interactions (reveals, cursor, particles, contact form, data loading)
-│   ├── fonts/                          # local fonts
+│   │   └── main.js                     # interactions (mobile menu, scroll-spy, reveals, counters, particles, contact form, data loading)
 │   └── images/
-│       ├── profile/
-│       │   └── avatar.svg              # profile picture
-│       ├── icons/                      # icons
-│       ├── backgrounds/                # background graphics
-│       └── projects/                   # project screenshots
+│       └── avatar.svg                  # profile picture
 │
-├── data/
-│   ├── profile.json                    # hero: name, role, intro, links, stats
-│   ├── skills.json                     # areas of expertise cards
-│   ├── experience.json                 # roles, highlights, responsibilities
-│   ├── education.json                  # education stages
-│   ├── certifications.json             # certifications & licenses
-│   └── achievements.json               # hall of fame / recognitions
-│
-└── designs/                            # design deliverables
-    ├── branding/
-    │   ├── colors/
-    │   │   └── palette.md              # color palette
-    │   ├── typography/
-    │   │   └── typography.md           # font system
-    │   └── logo/
-    │       └── logo.md                 # logo specs
-    ├── ui-kit/
-    │   └── UI-Kit.md                   # UI kit
-    ├── wireframes/
-    ├── mockups/
-    │   └── home-page.html              # home page mockup
-    ├── figma-exports/
-    └── references/
+└── data/
+    ├── profile.json                    # hero: name, role, intro, links, stats
+    ├── skills.json                     # areas of expertise cards
+    ├── experience.json                 # roles, highlights, responsibilities
+    ├── education.json                  # education stages
+    ├── certifications.json             # certifications & licenses
+    └── achievements.json               # hall of fame / recognitions
 ```
 
 ## Live Site
