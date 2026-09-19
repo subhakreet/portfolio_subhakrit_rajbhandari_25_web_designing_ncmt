@@ -225,36 +225,6 @@
   }
 
   /* ---------------------------------------------------------
-   * Skill bars
-   * --------------------------------------------------------- */
-  function initSkillBars() {
-    var fills = doc.querySelectorAll(".skill__fill[data-level]");
-
-    if (!("IntersectionObserver" in window)) {
-      fills.forEach(function (el) {
-        el.style.width = el.getAttribute("data-level") + "%";
-      });
-      return;
-    }
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.style.width = entry.target.getAttribute("data-level") + "%";
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5, rootMargin: "0px 0px -40px 0px" }
-    );
-
-    fills.forEach(function (el) {
-      observer.observe(el);
-    });
-  }
-
-  /* ---------------------------------------------------------
    * Particle field
    * --------------------------------------------------------- */
   (function initParticles() {
@@ -715,7 +685,6 @@
       if (finished === total) {
         initReveal();
         initCounters();
-        initSkillBars();
       }
     }
 
@@ -737,5 +706,4 @@
 
   initReveal();
   initCounters();
-  initSkillBars();
 })();
