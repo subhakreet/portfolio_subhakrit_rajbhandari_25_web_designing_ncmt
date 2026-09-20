@@ -11,6 +11,11 @@
       "icon": "lock"
     },
     {
+      "title": "APIsec Certified Practitioner (ACP)",
+      "org": "API Security",
+      "icon": "api"
+    },
+    {
       "title": "Certified Network Security Practitioner (CNSP)",
       "org": "Network Security",
       "icon": "fingerprint"
