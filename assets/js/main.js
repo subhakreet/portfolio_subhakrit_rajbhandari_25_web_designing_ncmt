@@ -92,7 +92,9 @@
           if (entry.isIntersecting) {
             var id = "#" + entry.target.id;
             links.forEach(function (link) {
-              link.classList.toggle("is-active", link.getAttribute("href") === id);
+              var active = link.getAttribute("href") === id;
+              link.classList.toggle("is-active", active);
+              link.toggleAttribute("aria-current", active);
             });
           }
         });
@@ -417,7 +419,7 @@
 
     function renderProfile(data) {
       if (data.name) {
-        if (doc.title) doc.title = data.name;
+        doc.title = data.name;
         var nameEl = doc.querySelector(".hero__name");
         if (nameEl) {
           var parts = data.name.trim().split(/\s+/);
@@ -705,5 +707,4 @@
   })();
 
   initReveal();
-  initCounters();
 })();
