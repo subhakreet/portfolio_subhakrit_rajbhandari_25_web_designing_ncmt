@@ -1,6 +1,6 @@
 # Subhakrit Rajbhandari - Portfolio
 
-A static portfolio website. Dark theme, minimal and clean, with a subtle cyber feel.
+A static personal portfolio website.
 
 ## Tech Stack
 
