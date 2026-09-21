@@ -1,6 +1,4 @@
-/* ---------- Design tokens ---------- */
 :root {
-  /* Brand palette — dark premium charcoal */
   --ink-950: #06090d;
   --ink-900: #0b0f14;
   --ink-850: #0e141c;
@@ -8,7 +6,6 @@
   --ink-700: #1a2432;
   --ink-600: #263247;
 
-  /* Soft blue / cyan accents */
   --accent-200: #bae6fd;
   --accent-300: #7dd3fc;
   --accent-400: #38bdf8;
@@ -26,11 +23,9 @@
   --emerald-300: #6ee7b7;
   --emerald-400: #34d399;
 
-  /* Typography */
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* Elevation */
   --shadow-soft: 0 10px 40px -12px rgba(0, 0, 0, 0.55);
   --shadow-glow: 0 0 40px -8px rgba(56, 189, 248, 0.35);
   --shadow-card: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
@@ -39,7 +34,6 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ---------- Base ---------- */
 *,
 *::before,
 *::after {
