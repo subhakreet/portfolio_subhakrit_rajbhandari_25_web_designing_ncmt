@@ -4,7 +4,7 @@ A static personal portfolio website.
 
 ## Tech Stack
 
-- Plain HTML + CSS + JavaScript — no frameworks, no build step
+- Plain HTML + CSS + JavaScript
 - Content loaded from JSON files in `/data`
 - Google Fonts (CDN)
 
