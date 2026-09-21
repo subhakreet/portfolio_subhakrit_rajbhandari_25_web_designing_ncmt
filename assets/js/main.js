@@ -373,7 +373,7 @@
       sendIcon = btn.querySelector(".send");
     }
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
       if (state !== "idle") return;
       if (!validate()) return;
@@ -381,19 +381,41 @@
       state = "sending";
       setSending(true);
 
-      setTimeout(function () {
-        state = "sent";
-        setSending(false);
-        form.style.display = "none";
-        if (success) success.classList.add("is-visible");
-        form.reset();
+      var formData = new FormData(form);
+      formData.append("access_key", "3c748b96-f001-4a02-b8f7-38915e0e13e8");
 
-        setTimeout(function () {
+      try {
+        var response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        var data = await response.json();
+
+        if (data && data.success) {
+          state = "sent";
+          setSending(false);
+          form.style.display = "none";
+          if (success) success.classList.add("is-visible");
+          form.reset();
+
+          setTimeout(function () {
+            state = "idle";
+            form.style.display = "";
+            if (success) success.classList.remove("is-visible");
+          }, 4200);
+        } else {
           state = "idle";
-          form.style.display = "";
-          if (success) success.classList.remove("is-visible");
-        }, 4200);
-      }, 1400);
+          setSending(false);
+          alert(
+            "Something went wrong sending your message.\n" +
+              (data && data.message ? data.message : "Please try again.")
+          );
+        }
+      } catch (error) {
+        state = "idle";
+        setSending(false);
+        alert("Something went wrong. Please check your connection and try again.");
+      }
     });
   })();
 

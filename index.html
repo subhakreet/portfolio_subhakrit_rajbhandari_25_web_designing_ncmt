@@ -319,20 +319,20 @@
                     <div class="form-row">
                       <div class="field"> 
                         <label for="name">Name</label>
-                        <input id="name" type="text" autocomplete="name" required placeholder="Your name" />
+                        <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
                       </div>
                       <div class="field">
                         <label for="email">Email</label>
-                        <input id="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+                        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
                       </div>
                     </div>
                     <div class="field">
                       <label for="subject">Subject</label>
-                      <input id="subject" type="text" required placeholder="How can I help?" />
+                      <input id="subject" name="subject" type="text" required placeholder="How can I help?" />
                     </div>
                     <div class="field">
                       <label for="message">Message</label>
-                      <textarea id="message" rows="5" required placeholder="Tell me about your engagement or inquiry..."></textarea>
+                      <textarea id="message" name="message" rows="5" required placeholder="Tell me about your engagement or inquiry..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-send" id="sendBtn">
                       <svg class="send"><use href="#i-send"></use></svg>
